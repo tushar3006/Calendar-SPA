@@ -1,0 +1,30 @@
+<html ng-app=main>
+<head>
+<script src=angular.min.js ></script>
+<script src=main.js></script>
+ <link rel="stylesheet" href="bootstrap.min.css">
+ <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  
+
+</head>
+
+<body ng-controller="dataCtrl" ng-keyup=key($event)>
+
+<div class="container">
+<div class=well> 
+<div class=well-in ng-init=invoker(1)>
+<input ng-click="invoker(1) " type="button"  value="<<" class="btn " />&nbsp;
+{{date|date}}&nbsp;
+<input ng-click="invoker(2)" type="button" value=">>" class="btn" />
+</div>
+</div>
+<div class="container-fluid"><div class="hr"><div style="height:15%;text-align:right;" ng-repeat="val in hour">{{val|date:'shortTime'}}<br></div></div><div id=creator style="width:70%;float:right"></div></div>
+
+</div>
+
+
+
+</body>
+</html>
